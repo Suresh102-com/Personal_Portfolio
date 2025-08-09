@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, msg in messages %}
+                    <div class="flash {{ category }}">{{ msg }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Message:</label>
+            <textarea name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer>
+    <p>© 2025 Suresh Vishwas | Built with Flask</p>
+    <div class="footer-icons">
+        <a href="https://github.com/" target="_blank" title="GitHub">🐱</a>
+        <a href="https://linkedin.com/" target="_blank" title="LinkedIn">💼</a>
+        <a href="mailto:youremail@example.com" title="Email">✉️</a>
+    </div>
+</footer>
+</body>
+</html>
