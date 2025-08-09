@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Suresh Vishwas</h1>
+        <p>Full Stack Developer | Python Enthusiast | Tech Explorer</p>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I'm a passionate developer with experience in building real-world applications using Python, Flask, and modern web technologies.</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Project 1:</strong> Real-time Chat App</li>
+            <li><strong>Project 2:</strong> Data Analysis Dashboard</li>
+            <li><strong>Project 3:</strong> E-commerce Website</li>
+        </ul>
+    </section>
+
+    <footer>
+    <p>© 2025 Suresh Vishwas | Built with Flask</p>
+    <div class="footer-icons">
+        <a href="https://github.com/" target="_blank" title="GitHub">🐱</a>
+        <a href="https://linkedin.com/" target="_blank" title="LinkedIn">💼</a>
+        <a href="mailto:youremail@example.com" title="Email">✉️</a>
+    </div>
+</footer>
+</body>
+</html>
