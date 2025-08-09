@@ -1,0 +1,158 @@
+/* Make footer stick to bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') 
+                no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Main content takes remaining space */
+main, section {
+    flex: 1;
+    width: calc(100% - 40px); /* Ensures no horizontal scroll */
+    max-width: 1400px; /* Large for desktop */
+    margin: 30px auto;
+    padding: 50px; /* Spacious feel */
+    border-radius: 14px;
+
+    /* Glassmorphism background */
+    background: rgba(0, 0, 80, 0.6);
+    backdrop-filter: blur(8px);
+
+    /* Soft shadow for depth */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+    /* Smooth transition on hover */
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Hover effect for interactive feel */
+main:hover, section:hover {
+    background: rgba(0, 0, 100, 0.7);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Mobile & tablet adjustments */
+@media (max-width: 1024px) {
+    main, section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    main, section {
+        padding: 20px;
+        width: calc(100% - 20px);
+    }
+}
+
+/* Transparent dark blue header */
+header {
+    background: rgba(0, 0, 64, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: #cce7ff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Form styling for contact page */
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input:focus, 
+form textarea:focus {
+    border: 2px solid #66aaff;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+form button {
+    background: #0044cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #0066ff;
+}
+
+/* Flash message styles */
+.flash.success {
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Stylish sticky footer */
+footer {
+    background: linear-gradient(to right, rgba(0, 0, 64, 0.9), rgba(0, 0, 120, 0.9));
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #cce7ff;
+}
+
+/* Footer icons */
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: #cce7ff;
+    margin: 0 8px;
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #66aaff;
+    transform: scale(1.2);
+}
+
+/* Text shadow for readability */
+body, h1, h2, p, label {
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
